@@ -61,7 +61,8 @@ To create a builder, use the `createBuilder()` CLI Builder function, and return 
 
 ```
 
-import { BuilderOutput, createBuilder } from '@angular-devkit/architect';
+import { BuilderOutput, createBuilder, BuilderContext } from '@angular-devkit/architect';
+import { JsonObject } from '@angular-devkit/core';
 
 export default createBuilder(_commandBuilder);
 
@@ -79,7 +80,8 @@ The following code retrieves the command and arguments from the user options, sp
 If the process is successful (returns a code of 0), it resolves the return value.
 
 ```
-import { BuilderOutput, createBuilder } from '@angular-devkit/architect';
+import { BuilderOutput, createBuilder, BuilderContext } from '@angular-devkit/architect';
+import { JsonObject } from '@angular-devkit/core';
 import * as childProcess from 'child_process';
 
 export default createBuilder(_commandBuilder);
@@ -107,6 +109,7 @@ We can retrieve a Logger instance from the context.
 
 ```
 import { BuilderOutput, createBuilder, BuilderContext } from '@angular-devkit/architect';
+import { JsonObject } from '@angular-devkit/core';
 import * as childProcess from 'child_process';
 
 export default createBuilder(_commandBuilder);
@@ -149,6 +152,7 @@ Pass an empty string to remove the status.
 
 ```
 import { BuilderOutput, createBuilder, BuilderContext } from '@angular-devkit/architect';
+import { JsonObject } from '@angular-devkit/core';
 import * as childProcess from 'child_process';
 
 export default createBuilder(_commandBuilder);
